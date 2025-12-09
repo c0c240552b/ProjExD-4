@@ -419,19 +419,7 @@ def main():
             
             ###  修正箇所：キーダウンイベントで発射を判定する 
             if event.type == pg.KEYDOWN and event.key == pg.K_SPACE:
-<<<<<<< HEAD
-                # 押された瞬間にLeft Shiftキーの状態をチェックする
-                if key_lst[pg.K_LSHIFT]:
-                    # 【弾幕発射】Left Shift + Space
-                    beam_count = 5 
-                    neo_beam = NeoBeam(bird, beam_count)
-                    beams.add(neo_beam.gen_beams())
-                else:
-                    # 【通常発射】Space単体
-                    beams.add(Beam(bird))
-            ###  修正箇所ここまで 
-                
-=======
+<<<<<<<<< Temporary merge branch 1
                 beams.add(Beam(bird))
             if event.type == pg.KEYDOWN and event.key == pg.K_e:
                 if score.value >= 20:
@@ -446,7 +434,19 @@ def main():
                 if score.value >= 50 and len(shields) == 0:
                     shields.add(Shield(bird))
                     score.value -= 50  # スコア消費
->>>>>>> 81cb23d92c6639a2463c512f71b5e19b8a816363
+=========
+                # 押された瞬間にLeft Shiftキーの状態をチェックする
+                if key_lst[pg.K_LSHIFT]:
+                    # 【弾幕発射】Left Shift + Space
+                    beam_count = 5 
+                    neo_beam = NeoBeam(bird, beam_count)
+                    beams.add(neo_beam.gen_beams())
+                else:
+                    # 【通常発射】Space単体
+                    beams.add(Beam(bird))
+            ###  修正箇所ここまで 
+                
+>>>>>>>>> Temporary merge branch 2
         screen.blit(bg_img, [0, 0])
         
         
